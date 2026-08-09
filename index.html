@@ -620,6 +620,12 @@
       stroke: #fff
     }
 
+    .pillar-icon img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain
+    }
+
     .pillar-img {
       height: 118px;
       overflow: hidden;
@@ -735,120 +741,92 @@
       background: var(--amber)
     }
 
-    /* ===== COMPETITIVE ADVANTAGE ===== */
-    .adv {
-      background: var(--paper-2);
+    /* ===== HOW IT WORKS ===== */
+    .how {
+      background: var(--paper);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line)
     }
 
-    .adv .wrap {
-      padding-top: 76px;
-      padding-bottom: 76px
+    .how .wrap {
+      padding-top: 84px;
+      padding-bottom: 84px
     }
 
-    .adv-top {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 40px;
+    .how-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 56px
+    }
+
+    .how-eyebrow {
+      display: flex;
       align-items: center;
-      margin-bottom: 44px
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 14px
     }
 
-    .adv-top h2 {
-      font-size: clamp(24px, 3vw, 34px);
+    .how-eyebrow .dash {
+      width: 22px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--amber)
+    }
+
+    .how-head h2 {
+      font-size: clamp(26px, 3.6vw, 40px);
       font-weight: 800
     }
 
-    .adv-top p {
-      font-size: 15px;
-      color: var(--ink-2)
-    }
-
-    .adv-row {
+    .how-row {
       display: flex;
-      align-items: stretch;
-      justify-content: center;
-      gap: 0;
-      flex-wrap: wrap
+      align-items: flex-start;
+      justify-content: center
     }
 
-    .adv-node {
+    .how-step {
       flex: 1;
-      min-width: 150px;
+      max-width: 190px;
       text-align: center;
-      padding: 0 14px
+      display: flex;
+      flex-direction: column;
+      align-items: center
     }
 
-    .adv-node .ic {
-      width: 60px;
-      height: 60px;
+    .how-num {
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
+      border: 2px solid var(--green);
       background: #fff;
-      border: 1px solid var(--line);
+      color: var(--green);
+      font-size: 19px;
+      font-weight: 800;
       display: grid;
       place-items: center;
-      margin: 0 auto 14px;
-      box-shadow: var(--shadow-sm);
-      overflow: hidden
+      margin-bottom: 16px;
+      flex-shrink: 0
     }
 
-    .adv-node .ic svg {
-      width: 28px;
-      height: 28px;
-      stroke: var(--green)
-    }
-
-    .adv-node .ic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover
-    }
-
-    .adv-node.center .ic {
-      width: 78px;
-      height: 78px;
-      border: none;
-      overflow: hidden;
-      border-radius: 50%
-    }
-
-    .adv-node.center .ic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover
-    }
-
-    .adv-node h4 {
-      font-size: 15px;
-      font-weight: 700;
+    .how-step h4 {
+      font-size: 14.5px;
+      font-weight: 800;
       margin-bottom: 6px
     }
 
-    .adv-node p {
-      font-size: 12px;
-      color: var(--ink-3)
+    .how-step p {
+      font-size: 12.5px;
+      color: var(--ink-2);
+      line-height: 1.5
     }
 
-    .adv-connect {
-      display: flex;
-      align-items: center;
-      color: var(--line-2);
-      padding-top: 22px
-    }
-
-    .adv-connect svg {
-      width: 22px;
-      height: 22px;
-      stroke: var(--lime)
-    }
-
-    .adv-tagline {
-      text-align: center;
-      margin-top: 44px;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--green)
+    .how-connect {
+      flex: 0 0 34px;
+      height: 2px;
+      margin-top: 25px;
+      border-top: 2px dashed var(--green);
+      opacity: .55
     }
 
     /* ===== IMPACT NUMBERS ===== */
@@ -1455,8 +1433,17 @@
         grid-template-columns: 1fr
       }
 
-      .adv-top {
-        grid-template-columns: 1fr
+      .how-row {
+        flex-wrap: wrap;
+        row-gap: 36px
+      }
+
+      .how-step {
+        flex: 0 0 30%
+      }
+
+      .how-connect {
+        display: none
       }
     }
 
@@ -1511,13 +1498,9 @@
         grid-template-columns: 1fr
       }
 
-      .adv-row {
-        flex-direction: column;
-        gap: 20px
-      }
-
-      .adv-connect {
-        transform: rotate(90deg)
+      .how-step {
+        flex: 0 0 100%;
+        max-width: none
       }
 
       .footer .top {
@@ -1643,11 +1626,9 @@
         <!-- Farms -->
         <div class="pillar">
           <div class="pillar-h"><span class="num">01</span>
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-                <circle cx="7" cy="17" r="2" />
-                <circle cx="17" cy="17" r="2" />
-                <path d="M5 17V9h9l3 4h2v4" />
-              </svg></div>
+            <div class="pillar-icon"><img
+                src="https://raw.githubusercontent.com/Lalitha-Kalle/icons/refs/heads/main/jeep.png"
+                alt="AI-Native Farming-as-a-Service"></div>
             <div class="info">
               <h3>CultAI Farms</h3>
               <div class="sub">AI-Native Farming-as-a-Service</div>
@@ -1672,9 +1653,9 @@
         <!-- Trade -->
         <div class="pillar">
           <div class="pillar-h"><span class="num">02</span>
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-                <path d="M3 7h18l-2 12H5z" />
-              </svg></div>
+            <div class="pillar-icon"><img
+                src="https://raw.githubusercontent.com/Lalitha-Kalle/icons/refs/heads/main/ship2.png"
+                alt="Global Import · Export · Commodity Trading"></div>
             <div class="info">
               <h3>CultAI Trade</h3>
               <div class="sub">Global Import · Export · Commodity Trading</div>
@@ -1699,10 +1680,9 @@
         <!-- Intelligence -->
         <div class="pillar">
           <div class="pillar-h"><span class="num">03</span>
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-                <rect x="3" y="4" width="18" height="14" rx="2" />
-                <path d="M8 21h8" />
-              </svg></div>
+            <div class="pillar-icon"><img
+                src="https://raw.githubusercontent.com/Lalitha-Kalle/icons/refs/heads/main/ai.png" alt="AI Platform">
+            </div>
             <div class="info">
               <h3>CultAI Intelligence</h3>
               <div class="sub">AI Platform</div>
@@ -1727,9 +1707,9 @@
         <!-- Capital -->
         <div class="pillar">
           <div class="pillar-h"><span class="num">04</span>
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-                <path d="M4 21V10l8-6 8 6v11M4 14h16" />
-              </svg></div>
+            <div class="pillar-icon"><img
+                src="https://raw.githubusercontent.com/Lalitha-Kalle/icons/refs/heads/main/house.png"
+                alt="Investment & Infrastructure"></div>
             <div class="info">
               <h3>CultAI Capital</h3>
               <div class="sub">Investment &amp; Infrastructure</div>
@@ -1756,71 +1736,49 @@
   </section>
 
   <!-- COMPETITIVE ADVANTAGE -->
-  <section class="adv" id="advantage">
+  <section class="how" id="advantage">
     <div class="wrap">
-      <div class="center-head" style="margin-bottom:34px">
-        <div class="deco"><span class="line l"></span><span class="leaf"><svg viewBox="0 0 24 24">
-              <path d="M12 3C9 8 9 12 12 21C15 12 15 8 12 3z" />
-            </svg></span><span class="eyebrow">Our Competitive Advantage</span><span class="leaf"><svg
-              viewBox="0 0 24 24">
-              <path d="M12 3C9 8 9 12 12 21C15 12 15 8 12 3z" />
-            </svg></span><span class="line r"></span></div>
+      <div class="how-head">
+        <div class="how-eyebrow"><span class="dash"></span><span class="eyebrow">How It Works</span></div>
+        <h2>From farm onboarding to<br>market payout, in six steps</h2>
       </div>
-      <div class="adv-top">
-        <h2>CultAI integrates four strategic pillars into one connected ecosystem.</h2>
-        <p>Together, we combine technology, operations, commerce, and capital — capabilities that are typically
-          fragmented across multiple organizations — into a single unified platform.</p>
-      </div>
-      <div class="adv-row">
-        <div class="adv-node">
-          <div class="ic"><img
-              src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=200&q=80"
-              alt="Tractor in a field"></div>
-          <h4>CultAI Farms</h4>
-          <p>AI-powered agricultural infrastructure and operations.</p>
+      <div class="how-row">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h4>Farm Onboarding</h4>
+          <p>Land and resource assessment for every registered farm.</p>
         </div>
-        <div class="adv-connect"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg></div>
-        <div class="adv-node">
-          <div class="ic"><img
-              src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=200&q=80"
-              alt="Cargo ship at port"></div>
-          <h4>CultAI Trade</h4>
-          <p>Procurement, commodities, and global import-export.</p>
+        <div class="how-connect"></div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h4>AI Farm Planning</h4>
+          <p>Data-driven crop and resource planning tailored to the land.</p>
         </div>
-        <div class="adv-connect"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg></div>
-        <div class="adv-node center">
-          <div class="ic"><img
-              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=300&q=80"
-              alt="Plant in hands"></div>
-          <h4>One Ecosystem</h4>
-          <p>Unified intelligence layer.</p>
+        <div class="how-connect"></div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h4>Service Deployment</h4>
+          <p>Tractors, drilling or harvesting teams deployed on schedule.</p>
         </div>
-        <div class="adv-connect"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg></div>
-        <div class="adv-node">
-          <div class="ic"><img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=200&q=80"
-              alt="Data dashboard"></div>
-          <h4>CultAI Intelligence</h4>
-          <p>AI, analytics, and market intelligence.</p>
+        <div class="how-connect"></div>
+        <div class="how-step">
+          <div class="how-num">4</div>
+          <h4>AI Monitoring</h4>
+          <p>Continuous tracking of crop health, yield and operations.</p>
         </div>
-        <div class="adv-connect"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg></div>
-        <div class="adv-node">
-          <div class="ic"><img
-              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=200&q=80"
-              alt="Solar panels"></div>
-          <h4>CultAI Capital</h4>
-          <p>Strategic investment and agricultural infrastructure.</p>
+        <div class="how-connect"></div>
+        <div class="how-step">
+          <div class="how-num">5</div>
+          <h4>Harvest &amp; Quality Check</h4>
+          <p>Timely recovery with quality verification before sale.</p>
+        </div>
+        <div class="how-connect"></div>
+        <div class="how-step">
+          <div class="how-num">6</div>
+          <h4>Procurement &amp; Payout</h4>
+          <p>Produce sold through the network with fast, transparent payment.</p>
         </div>
       </div>
-      <div class="adv-tagline">One Vision. Four Pillars. Infinite Impact.</div>
     </div>
   </section>
 
