@@ -1182,11 +1182,13 @@
 
     .markets-map {
       position: relative;
-      height: 240px;
+      aspect-ratio: 968 / 630;
       border-radius: 14px;
       overflow: hidden;
-      background-image: radial-gradient(rgba(170, 224, 180, .3) 1px, transparent 1.4px);
-      background-size: 14px 14px
+      background-image: url('world-map-dark.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center
     }
 
     .markets-map svg {
@@ -1198,8 +1200,6 @@
 
     .markets-map .india {
       position: absolute;
-      left: 60%;
-      top: 62%;
       width: 14px;
       height: 14px;
       transform: translate(-50%, -50%);
@@ -2017,20 +2017,20 @@
       </div>
       <div class="markets-map">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="M60,62 Q35,30 8,38" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
-            opacity=".65" />
-          <path d="M60,62 Q50,25 40,18" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
-            opacity=".65" />
-          <path d="M60,62 Q56,50 52,52" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
-            opacity=".65" />
-          <path d="M60,62 Q72,74 80,78" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
-            opacity=".65" />
+          <path d="M68,59 Q40,26 17,32" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
+            opacity=".7" />
+          <path d="M68,59 Q58,18 52,17" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
+            opacity=".7" />
+          <path d="M68,59 Q64,56 62,55" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
+            opacity=".7" />
+          <path d="M68,59 Q76,66 78,71" fill="none" stroke="var(--lime)" stroke-width=".6" stroke-linecap="round"
+            opacity=".7" />
         </svg>
-        <span class="india"></span>
-        <span class="markets-pin" style="left:8%;top:38%">USA</span>
-        <span class="markets-pin" style="left:40%;top:18%">UK</span>
-        <span class="markets-pin" style="left:52%;top:52%">UAE</span>
-        <span class="markets-pin" style="left:80%;top:78%">Singapore</span>
+        <span class="india" style="left:68%;top:59%"></span>
+        <span class="markets-pin" style="left:17%;top:32%">USA</span>
+        <span class="markets-pin" style="left:52%;top:17%">UK</span>
+        <span class="markets-pin" style="left:62%;top:55%">UAE</span>
+        <span class="markets-pin" style="left:78%;top:71%">Singapore</span>
       </div>
       <div class="markets-stats">
         <div class="markets-stat"><b>10+</b><span>Core Commodities</span></div>
