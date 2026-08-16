@@ -670,8 +670,8 @@
     }
 
     .how .wrap {
-      padding-top: 48px;
-      padding-bottom: 48px
+      padding-top: 30px;
+      padding-bottom: 30px
     }
 
     .how-head {
@@ -821,6 +821,16 @@
     .founders {
       padding-top: 44px;
       padding-bottom: 44px
+    }
+
+    .founders-eyebrow::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--amber);
+      margin-top: 8px
     }
 
     .founders-grid {
@@ -1846,13 +1856,13 @@
   <!-- FOUNDER'S DESK -->
   <section class="founders" id="founders">
     <div class="wrap">
-      <span class="eyebrow" style="display:block;margin-bottom:26px">Founder's Desk</span>
+      <span class="eyebrow founders-eyebrow" style="display:block;margin-bottom:26px">Founder's Desk</span>
       <div class="founders-grid">
         <div class="founders-intro">
           <h2>Driven by Purpose.<br>Guided by Vision.</h2>
           <p>Meet the visionaries steering CultAI Group toward a smarter, greener, and more prosperous future for
             agriculture.</p>
-          <a href="#about" class="btn btn-outline">Read Our Story <svg viewBox="0 0 24 24" fill="none"
+          <a href="#about" class="btn btn-primary">Read Our Story <svg viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round">
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg></a>
