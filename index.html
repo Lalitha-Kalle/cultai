@@ -1735,12 +1735,13 @@
             alt="CultAI Group logo"></a>
         <div class="nav-links">
           <a href="#top" class="active">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#focus">Our Focus</a>
-          <a href="#advantage">Sustainability</a>
+          <a href="#about-ecosystem">About</a>
+          <a href="#focus">Ecosystem</a>
+          <a href="#advantage">How It Works</a>
+          <a href="#markets">Markets</a>
+          <a href="#founders">Founders</a>
           <a href="#insights">Insights</a>
-          <a href="#founders">Careers</a>
-          <a href="#footer">Contact Us</a>
+          <a href="#footer">Contact</a>
         </div>
         <a href="#footer" class="btn btn-primary">Get In Touch <svg viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -2109,7 +2110,7 @@
   </section>
 
   <!-- OUR MARKETS -->
-  <section class="markets">
+  <section class="markets" id="markets">
     <div class="wrap">
       <div class="markets-intro">
         <span class="eyebrow">Our Markets</span>
@@ -2210,12 +2211,13 @@
         <div>
           <h5>Quick Links</h5>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#focus">Our Focus</a></li>
-            <li><a href="#advantage">Sustainability</a></li>
+            <li><a href="#about-ecosystem">About</a></li>
+            <li><a href="#focus">Ecosystem</a></li>
+            <li><a href="#advantage">How It Works</a></li>
+            <li><a href="#markets">Markets</a></li>
+            <li><a href="#founders">Founders</a></li>
             <li><a href="#insights">Insights</a></li>
-            <li><a href="#founders">Careers</a></li>
-            <li><a href="#footer">Contact Us</a></li>
+            <li><a href="#footer">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -2259,7 +2261,7 @@
       document.querySelectorAll('.nav-links a').forEach(function (a) {
         a.addEventListener('click', function () { header.classList.remove('mobile-open'); menuBtn.setAttribute('aria-expanded', 'false'); });
       });
-      var ids = ['top', 'about', 'focus', 'advantage', 'insights', 'founders'];
+      var ids = ['top', 'about-ecosystem', 'focus', 'advantage', 'markets', 'founders', 'insights'];
       var links = document.querySelectorAll('.nav-links a');
       function spy() {
         var y = window.scrollY + 90, cur = 'top';
