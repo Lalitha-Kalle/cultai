@@ -885,71 +885,87 @@
       opacity: .55
     }
 
-    /* ===== IMPACT NUMBERS ===== */
-    .impact {
-      background: var(--green-900);
-      border-radius: var(--r);
-      padding: 26px 30px;
-      display: grid;
-      grid-template-columns: auto repeat(4, 1fr);
-      gap: 20px;
-      align-items: center;
+    /* ===== POWERED BY ===== */
+    .powered {
       position: relative;
-      overflow: hidden
+      overflow: hidden;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 52px 30px;
+      text-align: center
     }
 
-    .impact::before {
-      content: "";
+    .powered-arc {
       position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 6px;
-      background: var(--lime)
+      top: -40%;
+      width: 60%;
+      height: 220%;
+      border: 1px solid var(--line-2);
+      border-radius: 50%;
+      pointer-events: none
     }
 
-    .impact .label {
-      font-family: var(--f-mono);
-      font-size: 11px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #9FC4A6;
-      max-width: 12ch;
-      line-height: 1.4
+    .powered-arc-l {
+      left: -30%
     }
 
-    .impact .stat {
+    .powered-arc-r {
+      right: -30%
+    }
+
+    .powered-head {
+      position: relative;
       display: flex;
       align-items: center;
-      gap: 12px
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 16px
     }
 
-    .impact .stat .ic {
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
-      background: rgba(255, 255, 255, .08);
+    .powered-head .line {
+      width: 46px;
+      height: 1px;
+      background: var(--line-2)
+    }
+
+    .powered-head .leaf {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--line);
       display: grid;
-      place-items: center
+      place-items: center;
+      box-shadow: var(--shadow-sm)
     }
 
-    .impact .stat .ic svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--lime)
+    .powered-head .leaf svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--green)
     }
 
-    .impact .stat .k {
-      font-size: 24px;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1
+    .powered .eyebrow {
+      position: relative;
+      display: block;
+      margin-bottom: 16px
     }
 
-    .impact .stat .l {
-      font-size: 11px;
-      color: #9FC4A6;
-      margin-top: 3px
+    .powered p {
+      position: relative;
+      font-family: var(--f-heading);
+      font-size: clamp(18px, 2.4vw, 26px);
+      font-weight: 500;
+      color: var(--ink);
+      max-width: 60ch;
+      margin: 0 auto;
+      line-height: 1.5
+    }
+
+    .powered p strong {
+      color: var(--green);
+      font-weight: 700
     }
 
     /* ===== FOUNDER'S DESK ===== */
@@ -1589,11 +1605,6 @@
         border-bottom: none
       }
 
-      .impact {
-        grid-template-columns: 1fr 1fr;
-        gap: 18px
-      }
-
       .footer .top {
         grid-template-columns: 1fr 1fr
       }
@@ -1670,10 +1681,6 @@
       }
 
       .pillars {
-        grid-template-columns: 1fr
-      }
-
-      .impact {
         grid-template-columns: 1fr
       }
 
@@ -1950,48 +1957,24 @@
     </div>
   </section>
 
-  <!-- IMPACT NUMBERS -->
+  <!-- POWERED BY -->
   <section class="section" style="padding-top:60px;padding-bottom:20px" id="about">
     <div class="wrap">
-      <div class="impact">
-        <div class="label">Our Impact by the Numbers</div>
-        <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"
-              stroke-linecap="round">
-              <path d="M8 12a4 4 0 100-8 4 4 0 000 8zM2 21a6 6 0 0112 0M16 4a4 4 0 010 8" />
+      <div class="powered">
+        <div class="powered-arc powered-arc-l"></div>
+        <div class="powered-arc powered-arc-r"></div>
+        <div class="powered-head">
+          <span class="line"></span>
+          <span class="leaf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 21c8 0 14-6 14-14V5h-2C9 5 5 11 5 19v2z" />
+              <path d="M5 19c4-4 8-6 12-14" />
             </svg></span>
-          <div>
-            <div class="k">10K+</div>
-            <div class="l">Farmers Empowered</div>
-          </div>
+          <span class="line"></span>
         </div>
-        <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"
-              stroke-linecap="round">
-              <path d="M12 3C9 8 9 12 12 21C15 12 15 8 12 3z" />
-            </svg></span>
-          <div>
-            <div class="k">250K+</div>
-            <div class="l">Acres Impacted</div>
-          </div>
-        </div>
-        <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"
-              stroke-linecap="round">
-              <path d="M4 20V10M10 20V4M16 20v-8M22 20H2" />
-            </svg></span>
-          <div>
-            <div class="k">30+</div>
-            <div class="l">Technology Solutions</div>
-          </div>
-        </div>
-        <div class="stat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"
-              stroke-linecap="round">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z" />
-            </svg></span>
-          <div>
-            <div class="k">15+</div>
-            <div class="l">Countries Reached</div>
-          </div>
-        </div>
+        <span class="eyebrow">Powered by</span>
+        <p>A group of trusted fund houses across the UK, Switzerland, and the Middle East, with a combined
+          investment strength of <strong>$5B+</strong> in AUM.</p>
       </div>
     </div>
   </section>
